@@ -3,6 +3,11 @@ function main(){
     const incrementButton = document.querySelector('#increment-button');
     const decrementButton = document.querySelector('#decrement-button');
 
+    const response = await fetch('http://localhost:9001/counter');
+    const result = await response.json();
+
+    console.log(result);
+    
     let countValue = 0;
 
     function increment(){
